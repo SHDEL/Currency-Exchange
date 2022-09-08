@@ -1,27 +1,27 @@
 
-print('Program Currency Convert')
+print('Program Convert สกุลเงิน')
 print('------------------------------------') 
 
 while True:
     def option():
-        print('---Press number options that you want to operate---')
-        print('Press(1) USD ') 
-        print('Press(2) EUR ')
-        print('Press(3) GBP ')
-        print('Press(4) CNY ')
-        print('Press(5) INR ')
+        print('---กดเลขที่เป็นสกุลงินของคุณและสกุลเงินที่คุณต้องการแปลง---')
+        print('กด(1) USD ดอลลาร์สหรัฐ') 
+        print('กด(2) EUR ยูโร')
+        print('กด(3) GBP ปอนด์เสตอร์ลิง')
+        print('กด(4) CNY หยวนจีน')
+        print('กด(5) INR รูปีอินเดีย')
         opt_x = -1
         while opt_x != 1 and opt_x != 2 and opt_x != 3 and opt_x != 4 and opt_x != 5:
-            opt_x = int(input('Press number options that you want to operate: '))
+            opt_x = int(input('ใส่เลขสกุลเงินที่ต้องการแปลง: '))
             if opt_x == 1 or opt_x == 2 or opt_x == 3 or opt_x == 4 or opt_x == 5:
                 pass
             else :
-                print("Only press 1 - 6 to operate")
+                print("ใส่เลข 1 - 6 ใหม่อีกครั้งเพื่อดำเนินการ")
                 continue
         return opt_x 
     x_opt = option()
 
-    money = int(input("Enter your money(THB): "))
+    money = int(input("ใส่จำนวนเงินของคุณ(THB): "))
 
     sum = 0
     ex_USD = 35.96
@@ -31,42 +31,42 @@ while True:
     ex_INR = 0.4075	
 
     if x_opt == 1:
-        text = 'USD '
+        text = 'USD ดอลลาร์สหรัฐ'
     elif x_opt == 2:
-        text = 'EUR '
+        text = 'EUR ยูโร'
     elif x_opt == 3:
-        text = 'GBP '
+        text = 'GBP ปอนด์เสตอร์ลิง'
     elif x_opt == 4:
-        text = 'CNY '
+        text = 'CNY หยวนจีน'
     else :
-        text = 'INR '
+        text = 'INR รูปีอินเดีย'
 
     print('------------------------------------')
-    print('Your money:',money,'\n','Your currency: (THB)','\n','Exchange to:',text)
+    print('จำนวนเงินของคุณ:',money,'\n','สกุลเงินของคุณ: THB(บาทไทย)','\n','หน่วยเงินที่คุณต้องการแปลง:',text)
     print('------------------------------------')
 
     if x_opt == 1:
         sum = money/ex_USD
-        print('Money form exchange THB->USD:',round(sum,2))
+        print('จำนวนเงินของTHB->USD:',round(sum,2))
         
     elif x_opt == 2:
         sum = money/ex_EUR
-        print('Money form exchange THB->EUR:',round(sum,2))
+        print('จำนวนเงินของTHB->EUR:',round(sum,2))
 
     elif x_opt == 3:
         sum = money/ex_GBP
-        print('Money form exchange THB->GBP:',round(sum,2))
+        print('จำนวนเงินของTHB->GBP:',round(sum,2))
 
     elif x_opt == 4:
         sum = money/ex_CNY
-        print('Money form exchange THB->CNY:',round(sum,2))
+        print('จำนวนเงินของTHB->CNY:',round(sum,2))
 
     elif x_opt == 5:
         sum = money/ex_INR
-        print('Money form exchange THB->INR:',round(sum,2))
+        print('จำนวนเงินของTHB->INR:',round(sum,2))
     
     print('------------------------------------')
-    print('If you want to restart programe pls type "restart" or type "exit" to exit the program')
+    print('ต้องการรีโปรแกรมให้พิมพ์ restart หรือ พิมพ์ exit เพื่อหยุดการทำงาน')
     restart = 'restart'
     restart_cmd = str(input(' ')) 
     if restart_cmd == restart:
